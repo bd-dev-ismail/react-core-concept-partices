@@ -4,22 +4,19 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <District name="Chittagong" special="Mejban"/>
+      <District name="Dhaka" special="Capital"/>
+      <District name="Kulna" special="Ku ku ku"/>
     </div>
   );
 }
-
+function District(props){
+  console.log(props);
+  return (
+    <div>
+      <h3>Name: {props.name}</h3>
+      <p>Specialty: {props.special}</p>
+    </div>
+  )
+}
 export default App;
