@@ -1,15 +1,11 @@
-
-
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Blog from './blog/Blog';
-import Mobile from './blog/Mobile';
-import Todos from './Todos/Todos';
+import { router } from './Routes/Routes';
+
 function App() {
   return (
     <div className="App">
-      <Mobile></Mobile>
-      <Todos/>
-      <Blog></Blog>
+     <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
